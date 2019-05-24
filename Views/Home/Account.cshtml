@@ -1,0 +1,32 @@
+<div id="header">
+    <h1>Welcome, @ViewBag.ThisUser.FirstName @ViewBag.ThisUser.LastName</h1>
+    <a href="/logout">Logout</a>
+    <span>Current Balance: <input type="text" value="@ViewBag.CurrentBalance" readonly></span>
+</div>
+@model Transaction
+<form id="dep_wd" action="/makeTransaction" method="POST">
+    <label asp-for="Amount">Deposit/Withdraw:</label>
+    <input asp-for="Amount" type="number" step="0.01" required>
+    <span asp-validation-for="Amount"></span>
+    <input asp-for="UserId" type="hidden" value="@ViewBag.ThisUser.UserId">
+    <input name="CurrBalance" type="hidden" value="@ViewBag.CurrentBalance">
+    <input type="submit" value="Submit">
+</form>
+<table class="table table-striped table-bordered">
+    <thead>
+        <th class="amt">Amount</th>
+        <th class="dte">Date</th>
+    </thead>
+    <tbody>
+        @if (ViewBag.AllTransactions != null)
+        {
+            @foreach(var t in ViewBag.AllTransactions)
+            {
+                <tr>
+                    <td>@t.Amount.ToString("C2")</td>
+                    <td>@t.CreatedAt.ToString("MMM dd, yyyy")</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

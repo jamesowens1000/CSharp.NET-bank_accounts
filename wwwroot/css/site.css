@@ -1,0 +1,74 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+form{
+    border: 2px solid black;
+    width: 750px;
+    vertical-align: top;
+}
+form h1{
+    margin: 20px 0 50px 15px;
+    display: inline-block;
+}
+form a{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 250px;
+    text-decoration: underline;
+}
+.row{
+    height: 40px;
+    margin: 0 0 25px 20px;
+}
+.row label{
+    width: 145px;
+}
+.row span{
+    color: red;
+    margin: 10px;
+}
+
+#header{
+    margin-bottom: 50px;
+}
+#header h1{
+    display: inline-block;
+}
+#header a{
+    display: inline-block;
+    margin-left: 15%;
+}
+#header span{
+    display: inline-block;
+    margin-left: 15%;
+}
+#header input{
+    width: 85px;
+    text-align: center;
+}
+#dep_wd{
+    border: none;
+    margin-bottom: 25px;
+}
+#dep_wd input{
+    margin-left: 25px;
+}
+#dep_wd input[type="number"]{
+    width: 100px;
+    text-align: center;
+}
+.table{
+    width: 500px;
+}
+.amt{
+    width: 40%;
+}
